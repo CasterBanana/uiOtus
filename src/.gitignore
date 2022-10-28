@@ -1,0 +1,8 @@
+/.idea
+/.gitattributes
+/out
+/Animal.iml
+/.gradle
+/build
+/gradle
+logs.log
