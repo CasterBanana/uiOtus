@@ -36,6 +36,7 @@ test {
     systemProperty "username", System.getProperty("username")
     systemProperty "password", System.getProperty("password")
     systemProperty "base.url", System.getProperty("url")
+    systemProperty "browser", System.getProperty("browser")
 
 
 }

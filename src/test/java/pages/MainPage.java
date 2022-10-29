@@ -1,6 +1,7 @@
 package pages;
 
 import base.BaseTest;
+import driver.WebDriverFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,9 +11,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.Locale;
 
 public class MainPage{
-    private WebDriver driver;
+    //private WebDriver driver;
+    WebDriverFactory driver = new WebDriverFactory(System.getProperty("browser").toLowerCase(Locale.ROOT));
     private final static String BASE_URL = System.getProperty("base.url");
     private final static String login = System.getProperty("username");
     private final static String password = System.getProperty("password");
@@ -25,7 +28,6 @@ public class MainPage{
 
     public void open(){
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get(BASE_URL);
     }
